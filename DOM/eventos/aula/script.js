@@ -97,3 +97,20 @@ function handleKeybord(e) {
   }
 }
 window.addEventListener("keydown", handleKeybord);
+
+/* 
+forEach e eventos
+O metodo AddEventeListener e adicionado a um unico elemento em especifico
+se for usar em uma lista, tera que ter um loop em uma lista 
+para falar com os elementos unicos 
+*/
+
+const imgs = document.querySelectorAll("img");
+
+function handleImg(e) {
+  console.log(e.currentTarget.getAttribute("src"));
+}
+
+imgs.forEach((img) => {
+  img.addEventListener("click", handleImg);
+});
